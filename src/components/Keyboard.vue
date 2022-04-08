@@ -43,15 +43,13 @@ export default {
 .keyboard {
   display: flex;
   flex-direction: column;
-  margin-top: auto;
-
 }
 .letters {
   display: flex;
 }
 .letter {
   padding: 10px;
-  background: rgb(211 214 218 / 50%);
+  background: rgba(211, 214, 218, 0.5);
   margin: 2px;
   border-radius: 5px;
   color: #000;

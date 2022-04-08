@@ -18,7 +18,6 @@ export default {
   },
   methods: {
     getLetter(letter) {
-      console.log(letter, 'getletter')
       this.currentLetter = letter;
     }
   }
@@ -30,6 +29,7 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 40px;
 }

@@ -9,6 +9,7 @@
           v-for="cell in 5"
           :key="cell"
           :id="row+''+cell"
+          :data-id="row+''+cell"
       />
     </div>
   </div>
@@ -25,8 +26,11 @@ export default {
       type: String
     }
   },
-  mounted() {
-    console.log(this.currentLetter, 'cur letter in grid')
+  watch: {
+    currentLetter(newValue) {
+      console.log(newValue, 'in grid');
+      this.$attrs['11'].set(newValue)
+    }
   }
 }
 </script>
