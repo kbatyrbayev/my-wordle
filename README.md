@@ -1,4 +1,4 @@
-# wordle
+# wordle on kazakh language on vue js
 
 ## Project setup
 ```
