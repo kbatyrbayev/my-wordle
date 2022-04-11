@@ -1,5 +1,5 @@
 <template>
-  <div class="cell">{{ id }}</div>
+  <div class="cell" :data-id="id">{{ value }}</div>
 </template>
 
 <script>
@@ -7,6 +7,9 @@ export default {
   name: "my-cell",
   props: {
     id: {
+      type: String
+    },
+    value: {
       type: String
     }
   }
@@ -23,5 +26,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+  user-select: none;
 }
 </style>
