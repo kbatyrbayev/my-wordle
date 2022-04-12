@@ -1,16 +1,18 @@
 <template>
-  <my-main></my-main>
+  <my-main/>
 </template>
 
 <script>
-
 import MyMain from "@/components/Main";
 
 export default {
   name: 'App',
-  components: {MyMain}
+  components: {
+    MyMain,
+  }
 }
 </script>
+
 
 <style>
 

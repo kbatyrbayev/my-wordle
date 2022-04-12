@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       letters: [
-        ['Ә', 'І', 'Ң', 'Ғ', 'Ү', 'Ұ', 'Қ', 'Ө', 'Һ','З', 'Х'],
+        ['Ә', 'І', 'Ң', 'Ғ', 'Ү', 'Ұ', 'Қ', 'Ө', 'Һ', 'З', 'Х'],
         ['Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'Ж', 'Э'],
         ['Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', '⌫'],
         ['Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', '↩']
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     selectLetter(letter) {
-      this.$emit('emiLetter', letter);
+      this.$store.commit('changeLetter', letter);
     }
   }
 }
@@ -44,9 +44,11 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 .letters {
   display: flex;
 }
+
 .letter {
   padding: 10px;
   background: rgba(211, 214, 218, 0.5);
@@ -60,10 +62,13 @@ export default {
   align-items: center;
   font-weight: bold;
   cursor: pointer;
+  user-select: none;
 }
+
 .letter:hover {
   background: #D3D6DA;
 }
+
 .long {
   width: 94px;
   font-size: 30px;

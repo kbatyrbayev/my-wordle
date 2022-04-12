@@ -29,4 +29,16 @@ export default {
   font-weight: bold;
   user-select: none;
 }
+.cell.green {
+  background: green;
+  color: #fff;
+}
+.cell.grey {
+  background: #94A3B8;
+  color: #fff;
+}
+.cell.orange {
+  background: #F59E0B;
+  color: #fff;
+}
 </style>

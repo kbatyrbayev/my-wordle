@@ -1,24 +1,30 @@
 <template>
   <div class="main">
-    <my-grid :currentLetter="currentLetter"/>
-    <my-keyboard @emiLetter="getLetter"/>
+    <v-snackbar
+        v-model="$store.state.warningMessage"
+        :top="true"
+        :timeout="2000"
+    >
+      {{ text }}
+    </v-snackbar>
+    <my-dialog v-model:showDialog="$store.state.winDialog">
+    </my-dialog>
+    <my-grid/>
+    <my-keyboard/>
   </div>
 </template>
 
 <script>
 import MyGrid from "@/components/Grid";
 import MyKeyboard from "@/components/Keyboard";
+import MyDialog from "@/plugins/MyDialog";
+
 export default {
   name: "my-main",
-  components: {MyKeyboard, MyGrid},
+  components: {MyKeyboard, MyGrid, MyDialog},
   data() {
     return {
-      currentLetter: ''
-    }
-  },
-  methods: {
-    getLetter(letter) {
-      this.currentLetter = letter;
+      text: `Бұндай сөз табылмады`,
     }
   }
 }
