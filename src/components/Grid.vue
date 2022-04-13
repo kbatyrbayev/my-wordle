@@ -74,18 +74,6 @@ export default {
       currentRowId: 0,
       currentCellId: 0,
       solution: 'айлық',
-      words: [
-        'көлік',
-        'ілгіш',
-        'желім',
-        'керім',
-        'жібек',
-        'желім',
-        'аспан',
-        'көмек',
-        'балық',
-        'айлық'
-      ]
     }
   },
   methods: {
@@ -97,7 +85,7 @@ export default {
       if (char === '↩') {
         if (this.currentCellId === 5) {
           const word = cells.map(m => m.value).join('').toLowerCase();
-          const isWord = this.words.findIndex(f => f.toLowerCase() === word);
+          const isWord = sozder.findIndex(f => f.w.toLowerCase() === word);
           console.log(isWord, 'isWord')
           if (isWord !== -1) {
             this.checkWord(cells);
