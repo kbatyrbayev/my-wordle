@@ -1,15 +1,16 @@
 <template>
-  <my-main/>
+  <my-header/>
+  <game-page/>
 </template>
 
 <script>
-import MyMain from "@/components/Main";
+
+import GamePage from "@/pages/GamePage";
+import MyHeader from "@/components/MyHeader";
 
 export default {
   name: 'App',
-  components: {
-    MyMain,
-  }
+  components: {MyHeader, GamePage}
 }
 </script>
 
@@ -33,5 +34,10 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
 }
 </style>

@@ -43,6 +43,7 @@ export default {
 .keyboard {
   display: flex;
   flex-direction: column;
+  margin-top: auto;
 }
 
 .letters {

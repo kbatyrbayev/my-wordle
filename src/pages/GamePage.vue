@@ -7,8 +7,7 @@
     >
       {{ text }}
     </v-snackbar>
-    <my-dialog v-model:showDialog="$store.state.winDialog">
-    </my-dialog>
+    <my-dialog v-model:showDialog="$store.state.winDialog"/>
     <my-grid/>
     <my-keyboard/>
   </div>
@@ -20,7 +19,7 @@ import MyKeyboard from "@/components/Keyboard";
 import MyDialog from "@/plugins/MyDialog";
 
 export default {
-  name: "my-main",
+  name: "game-page",
   components: {MyKeyboard, MyGrid, MyDialog},
   data() {
     return {
@@ -35,7 +34,6 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 40px;
 }
