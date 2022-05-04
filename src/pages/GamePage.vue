@@ -7,7 +7,9 @@
     >
       {{ text }}
     </v-snackbar>
-    <my-dialog v-model:showDialog="$store.state.winDialog"/>
+    <my-dialog v-model:showDialog="$store.state.winDialog">
+      <h1>Әп, бәрекелді!</h1>
+    </my-dialog>
     <my-grid/>
     <my-keyboard/>
   </div>

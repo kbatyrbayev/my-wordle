@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <svg class="icon" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg @click="openSignupDialog" class="icon" width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M10.833 13.3337L14.9997 10.0003L10.833 6.66699V9.16699H3.33301V10.8337H10.833V13.3337Z"
             fill="#1E54B7"></path>
       <path
@@ -16,7 +16,12 @@
 
 <script>
 export default {
-  name: "my-header"
+  name: "my-header",
+  methods: {
+    openSignupDialog() {
+      this.$store.commit('activateSignupDialog')
+    }
+  }
 }
 </script>
 
@@ -33,8 +38,10 @@ export default {
   cursor: pointer;
 
   &:hover {
-    background: #ccc;
-    transition: background 0.2s ease-in-out;
+    path {
+      fill: rgb(30 84 183 / 70%);
+      transition: fill 0.3s ease-in-out;
+    }
   }
 
   span {

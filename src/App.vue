@@ -1,16 +1,29 @@
 <template>
   <my-header/>
   <game-page/>
+  <my-dialog v-model:showDialog="$store.state.registrationDialog"  :dialogStyle="dialogStyle">
+    <my-registration/>
+  </my-dialog>
 </template>
 
 <script>
 
 import GamePage from "@/pages/GamePage";
 import MyHeader from "@/components/MyHeader";
+import MyDialog from "@/plugins/MyDialog";
+import MyRegistration from "@/components/MyRegistration";
 
 export default {
   name: 'App',
-  components: {MyHeader, GamePage}
+  components: {MyHeader, GamePage, MyDialog, MyRegistration},
+  data() {
+    return {
+      dialogStyle: {
+        padding: 0,
+        borderRadius: 0
+      }
+    }
+  }
 }
 </script>
 

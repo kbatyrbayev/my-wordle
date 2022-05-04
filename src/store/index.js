@@ -4,7 +4,8 @@ export default createStore({
   state: {
     currentLetter: '',
     warningMessage: false,
-    winDialog: false
+    winDialog: false,
+    registrationDialog: false
   },
   getters: {
     getLetter(state) {
@@ -20,6 +21,9 @@ export default createStore({
     },
     activateWinDialog(state) {
       state.winDialog = true;
+    },
+    activateSignupDialog(state) {
+      state.registrationDialog = true;
     }
   },
   actions: {}

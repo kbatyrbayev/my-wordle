@@ -1,7 +1,7 @@
 <template>
   <div v-if="showDialog" class="dialog" @click="hideDialog">
-    <div class="dialog-content" @click.stop>
-      <h1>Әп, бәрекелді!</h1>
+    <div :style="dialogStyle" class="dialog-content" @click.stop>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -13,6 +13,9 @@ export default {
     showDialog: {
       type: Boolean,
       value: false
+    },
+    dialogStyle: {
+      type: Object
     }
   },
   methods: {
@@ -37,8 +40,8 @@ export default {
   margin: auto;
   padding: 20px;
   background: white;
-  min-width: 300px;
-  min-height: 100px;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 20px;
   text-align: center;
 }
