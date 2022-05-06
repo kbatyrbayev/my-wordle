@@ -22,8 +22,8 @@ export default createStore({
     activateWinDialog(state) {
       state.winDialog = true;
     },
-    activateSignupDialog(state) {
-      state.registrationDialog = true;
+    activateSignupDialog(state, bool) {
+      state.registrationDialog = bool;
     }
   },
   actions: {}

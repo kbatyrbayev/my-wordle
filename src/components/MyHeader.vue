@@ -19,7 +19,7 @@ export default {
   name: "my-header",
   methods: {
     openSignupDialog() {
-      this.$store.commit('activateSignupDialog')
+      this.$store.commit('activateSignupDialog', true)
     }
   }
 }
